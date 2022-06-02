@@ -20,6 +20,9 @@ class _NowPlayingState extends State<NowPlaying> {
   String track = 'track1.mp3';
   Color color = Colors.black;
   IconData icon = Icons.favorite_outline;
+  String songTitle = "Billie Jean";
+  String songArtist = 'David Cook (American Idols Cover)';
+  String albumArt = 'billy-jean.webp';
   void _toggleLike() {
     setState(() {
       _isFav = !_isFav;
@@ -142,8 +145,8 @@ class _NowPlayingState extends State<NowPlaying> {
                   width: MediaQuery.of(context).size.width * 0.7,
                   height: MediaQuery.of(context).size.width * 0.8,
                   decoration: BoxDecoration(
-                    image: const DecorationImage(
-                      image: AssetImage('assets/albart.jpg'),
+                    image: DecorationImage(
+                      image: AssetImage(albumArt),
                       fit: BoxFit.fill,
                     ),
                     color: Colors.white,
@@ -168,18 +171,18 @@ class _NowPlayingState extends State<NowPlaying> {
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
-                        'Billie Jean',
-                        style: TextStyle(
+                        songTitle,
+                        style: const TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w600,
                             fontSize: 16),
                       ),
-                      SizedBox(height: 4),
+                      const SizedBox(height: 4),
                       Text(
-                        'David Cook (American Idols Cover)',
-                        style: TextStyle(
+                        songArtist,
+                        style: const TextStyle(
                             color: Color.fromARGB(255, 166, 166, 166),
                             fontWeight: FontWeight.w500,
                             fontSize: 14),
@@ -231,6 +234,10 @@ class _NowPlayingState extends State<NowPlaying> {
                       onTap: () {
                         setState(() {
                           track = 'track1.mp3';
+                          songTitle = 'Billie Jean';
+                          songArtist = 'David Cook (American Idols Cover)';
+                          albumArt = 'billy-jean.webp';
+                          setAudio();
                         });
                       },
                       child: const Icon(
@@ -257,6 +264,10 @@ class _NowPlayingState extends State<NowPlaying> {
                       onTap: () {
                         setState(() {
                           track = 'track2.mp3';
+                          songTitle = 'Always be my baby';
+                          songArtist = 'David Cook (American Idols Cover)';
+                          albumArt = 'always.jpg';
+                          setAudio();
                         });
                       },
                       child: const Icon(
