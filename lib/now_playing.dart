@@ -22,7 +22,7 @@ class _NowPlayingState extends State<NowPlaying> {
   IconData icon = Icons.favorite_outline;
   String songTitle = "Billie Jean";
   String songArtist = 'David Cook (American Idols Cover)';
-  String albumArt = 'billy-jean.webp';
+  String albumArt = 'assets/billy-jean.webp';
   void _toggleLike() {
     setState(() {
       _isFav = !_isFav;
@@ -200,7 +200,7 @@ class _NowPlayingState extends State<NowPlaying> {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 20, 0, 10),
+                padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                 child: Slider(
                   min: 0,
                   max: duration.inSeconds.toDouble(),
@@ -236,7 +236,7 @@ class _NowPlayingState extends State<NowPlaying> {
                           track = 'track1.mp3';
                           songTitle = 'Billie Jean';
                           songArtist = 'David Cook (American Idols Cover)';
-                          albumArt = 'billy-jean.webp';
+                          albumArt = 'assets/billy-jean.webp';
                           setAudio();
                         });
                       },
@@ -266,7 +266,7 @@ class _NowPlayingState extends State<NowPlaying> {
                           track = 'track2.mp3';
                           songTitle = 'Always be my baby';
                           songArtist = 'David Cook (American Idols Cover)';
-                          albumArt = 'always.jpg';
+                          albumArt = 'assets/always.jpg';
                           setAudio();
                         });
                       },
