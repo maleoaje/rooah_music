@@ -202,6 +202,7 @@ class _NowPlayingState extends State<NowPlaying> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                 child: Slider(
+                  activeColor: const Color(0xff2921bb),
                   min: 0,
                   max: duration.inSeconds.toDouble(),
                   value: position.inSeconds.toDouble(),
